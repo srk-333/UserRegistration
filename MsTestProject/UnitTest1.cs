@@ -43,18 +43,18 @@ namespace MsTestProject
         public void TestMobileNumber_ReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidateMobileNumber("91 9934731585");
+            var actual = UserRegister.ValidateMobileNumber("91 7067845485");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
         public void TestMobileNumber_ReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidateMobileNumber("9134731585");
+            var actual = UserRegister.ValidateMobileNumber("7067845485");
             Assert.AreEqual(excepted, actual);
-            var actual1 = UserRegister.ValidateMobileNumber("23 9934731585");
+            var actual1 = UserRegister.ValidateMobileNumber("23 7067845485");
             Assert.AreEqual(excepted, actual1);
-            var actual2 = UserRegister.ValidateMobileNumber("23 993473158555");
+            var actual2 = UserRegister.ValidateMobileNumber("91 70678454858");
             Assert.AreEqual(excepted, actual2);
         }
     }
