@@ -11,7 +11,18 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Program");
+            UserRegistration();
             Console.ReadLine();
+        }
+        //Method to perform UserRegistration
+        public static void UserRegistration()
+        {
+            /* UC-1-UserRegistration
+             * Validate Fisrt Name starts with Cap and have atlest 2 letters.
+             */                       
+            Console.WriteLine("Enter First Name");
+            string firstName = Console.ReadLine();
+            Console.WriteLine(UserRegister.ValidateFirstName(firstName));
         }
     }
 }
