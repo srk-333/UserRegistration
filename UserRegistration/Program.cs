@@ -14,8 +14,8 @@ namespace UserRegistration
             bool Continue = true;
             while (Continue)
             {
-                Console.WriteLine("Choose Option to Validate with their specified Pattern");
-                Console.WriteLine("1 = First Name\n2 = Last Name\n3 =Email ID\n4 = Mobile Number\n5 = Password\n0 = Exit");
+                Console.WriteLine("\nChoose Option to Validate with their specified Pattern");
+                Console.WriteLine("1 = First Name\n2 = Last Name\n3 = Email ID\n4 = Mobile Number\n5 = Password\n6 = Sample Email Check\n0 = Exit");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
                 {
@@ -46,6 +46,9 @@ namespace UserRegistration
                         Console.WriteLine("Enter PassWord");
                         string password = Console.ReadLine();
                         Console.WriteLine(UserRegister.ValidatePassword(password));
+                        break;
+                    case 6:
+                        UserRegister.SampleEmail();
                         break;
                     default:
                         Console.WriteLine("Enter Correct Option!");
