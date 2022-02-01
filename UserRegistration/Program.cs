@@ -8,8 +8,9 @@ namespace UserRegistration
 {
     public class Program
     {
-        /* UC-2-UserRegistration
-         * Validate Last Name starts with Cap and have atlest 3 letters.
+        /* UC-4-UserRegistration
+         * Validate Mobile Number starts with Country Code and have atlest 1 space after code.
+         * and then after country code it should have 10 numbers only.
          */     
         //Method to perform UserRegistration
         public static void UserRegistration()
@@ -17,8 +18,8 @@ namespace UserRegistration
             bool Continue = true;
             while (Continue)
             {
-                Console.WriteLine("Choose Option");
-                Console.WriteLine("1 = First Name\n2 = Last Name\n0=Exit");
+                Console.WriteLine("Choose Option to Validate with their specified Pattern");
+                Console.WriteLine("1 = First Name\n2 = Last Name\n3=MobileNumber\n0=Exit");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
                 {
@@ -34,6 +35,11 @@ namespace UserRegistration
                         Console.WriteLine("Enter Last Name");
                         string lastName = Console.ReadLine();
                         Console.WriteLine(UserRegister.ValidateFirstName(lastName));
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter Mobile Number");
+                        string mobileNumber = Console.ReadLine();
+                        Console.WriteLine(UserRegister.ValidateMobileNumber(mobileNumber));
                         break;
                     default:
                         Console.WriteLine("Enter Correct Option!");
