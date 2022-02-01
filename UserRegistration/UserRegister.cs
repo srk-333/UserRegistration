@@ -12,8 +12,9 @@ namespace UserRegistration
         // Static Variable
         public static string firstNamePattern = "^[A-Z]{1}[a-z]{2}";
         public static string lastNamePattern = "^[A-Z]{1}[a-z]{2}";
+        public static string emailPattern = "^[a-zA-z]{3}([.]*[a-zA-Z])+[@]([a-z]{3,})+([.][a-z]{2,3})*$";
         public static string mobilePattern = "^([9][1])[ ]*[6-9]{1}[0-9]{9}$";
-        public static string passwordPatternR3 = "^(?=.*?[0-9])(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[@#$&*.!?]).{8,}";
+        public static string passwordPattern = "^(?=.*?[0-9])(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[@#$&*.!?]).{8,}";
         //Method to Validate First Name
         public static string ValidatePattern(string userInput, string pattern)
         {
@@ -35,6 +36,12 @@ namespace UserRegistration
             return lastNameMatch;
         }
         //Method to Validate Mobile Nuber
+        public static string ValidateEmailID(string mail)
+        {
+            var mailMatch = ValidatePattern(mail, emailPattern);
+            return mailMatch;
+        }
+        //Method to Validate Mobile Nuber
         public static string ValidateMobileNumber(string number)
         {
             var numberMatch = ValidatePattern(number, mobilePattern);
@@ -43,7 +50,7 @@ namespace UserRegistration
         //Method to Validate Mobile Nuber
         public static string ValidatePassword(string pass)
         {
-            var passMatch = ValidatePattern(pass, passwordPatternR3);
+            var passMatch = ValidatePattern(pass, passwordPattern);
             return passMatch;
         }
     }
