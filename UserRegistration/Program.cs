@@ -30,7 +30,7 @@ namespace UserRegistration
                     case 2:
                         Console.WriteLine("Enter Last Name");
                         string lastName = Console.ReadLine();
-                        Console.WriteLine(UserRegister.ValidateFirstName(lastName));
+                        Console.WriteLine(UserRegister.ValidateLastName(lastName));
                         break;
                     case 3:
                         Console.WriteLine("Enter Email ID");
