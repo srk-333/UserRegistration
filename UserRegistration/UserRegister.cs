@@ -27,12 +27,12 @@ namespace UserRegistration
                 }
                 else
                 {
-                    return "false";
+                    throw new UserRegisterException(UserRegisterException.ExceptionType.EXCEPTION, "false");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new UserRegisterException(UserRegisterException.ExceptionType.EXCEPTION, "Given Input is not valid");
+                return ex.Message;
             }
         }      
         //Method to Validate First Name
