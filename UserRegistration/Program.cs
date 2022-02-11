@@ -56,11 +56,20 @@ namespace UserRegistration
                 }
             }         
         }
+        //Method to perform LambdaValidation
+        public static void LambdaValidate()
+        {
+            LambdaValidation.ValidateFirstName();
+            LambdaValidation.ValidateLastName();
+            LambdaValidation.ValidateMobileNumber();
+            LambdaValidation.ValidateEmail();
+        }
         //Program Entry Point
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Program");
             UserRegistration();
+            LambdaValidate();
             Console.ReadLine();
         }
     }
